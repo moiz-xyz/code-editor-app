@@ -1,0 +1,325 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,img,div {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main-flex {
+  display: flex;
+  width: 100%;
+}
+
+.nav {
+  width: 21%;
+}
+
+.first {
+  text-align: center;
+}
+
+#logo {
+  width: 100%;
+}
+
+#logo2 {
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+/* Button styles */
+.btn {
+  background-color: transparent;
+  width: 90%;
+  height: 8vh;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  font-size: larger;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s, background-color 0.5s;
+  margin: 10px auto;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff007c, #ffcc00, #00eaff, #ff007c);
+  z-index: -1;
+  animation: move 2s linear infinite;
+}
+
+.btn:hover::before {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes move {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+/* Content */
+.content {
+  width: 75%;
+}
+
+.content-header {
+  width: 100%;
+  height: 13vh;
+  margin-top: 20px;
+}
+
+.content-header>input {
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.329);
+  height: 7vh;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.btn2 {
+  background-color: rgba(128, 128, 128, 0.43);
+  width: 10%;
+  height: 6vh;
+  margin-left: 45%;
+  font-size: medium;
+  color: white;
+}
+
+.btn3 {
+  width: 10%;
+  background-color: rgba(128, 128, 128, 0.43);
+  height: 6vh;
+  font-size: medium;
+  color: white;
+}
+
+/* Text Section */
+.text {
+  background-color: rgba(169, 169, 169, 0.093);
+  display: flex;
+  width: 100%;
+}
+
+.text1 {
+  height: 85vh;
+  padding-top: 50px;
+  width: 55%;
+}
+
+.text1 > h2 {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+}
+
+.text1 > p > b {
+  font-size: 25px;
+}
+
+.text1 > p {
+  font-weight: normal;
+  width: 100%;
+  font-size: small;
+}
+
+.text2 {
+  width: 10%;
+}
+
+/* Animation */
+@keyframes backInLeftLoop {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    color: red;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(30%);
+    color: blue;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+    color: green;
+  }
+}
+
+.animate__backInLeft {
+  animation: backInLeftLoop 2s ease-in-out infinite;
+}
+
+/* Media Queries for Smaller Devices */
+
+/* Devices > 1200px */
+@media (max-width: 1200px) {
+  .nav {
+    width: 25%;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .text1 {
+    width: 60%;
+  }
+.btn2{
+  margin-left: 30%;
+}
+   .btn2, .btn3 {
+    width: 10%;
+    height: 7vh;
+  }
+
+  .content-header>input {
+    width: 40%;
+  }
+}
+
+/* Devices > 900px */
+@media (max-width: 900px) {
+  .nav {
+    width: 30%;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .text1 {
+    width: 100%;
+  }
+
+  #logo2 {
+    height: 20vh;
+  }
+
+  .btn {
+    width: 100%;
+    height: 7vh;
+  }
+
+  .content-header>input {
+    width: 60%;
+  }
+}
+
+/* Devices > 600px */
+@media (max-width: 600px) {
+  .nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-main-flex {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .text1 {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  #logo2 {
+    height: 25vh;
+    width: 100%;
+    object-fit: contain; /* Ensure logo is contained properly */
+  }
+
+  .btn {
+    width: 80%;
+    height: 6vh;
+    margin: 10px auto;
+  }
+
+  .btn2, .btn3 {
+    width: 80%;
+    height: 6vh;
+    margin: 10px auto;
+  }
+
+  .content-header>input {
+    width: 80%;
+    height: 6vh;
+    margin-left: 0;
+  }
+
+  .text {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;  /* Adjust image size */
+  }
+  .text1>h2{
+    margin-top: 50px;
+  }
+  .text1{
+    height: 70vh;
+  }
+  .text2{
+    width: 100%;
+    margin-top: 0%;
+    padding-top: 0%;
+  }
+
+  /* Text2 Image Fix */
+  .text2 img {
+    height: auto;
+    width: 100%;
+
+  }
+}
+
+/* Devices > 400px */
+@media (max-width: 400px) {
+  .text1 > h2 {
+    font-size: 30px;
+  }
+
+  .text1 > p {
+    font-size: smaller;
+  }
+
+  .btn, .btn2, .btn3 {
+    height: 5vh;
+  }
+}
