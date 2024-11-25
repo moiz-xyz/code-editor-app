@@ -13,7 +13,7 @@ function login (){
             icon: "success",
             title: "Your have succesafully Login",
             showConfirmButton: false,
-            timer: 5000
+            timer: 7000
           });
           window.location.href = "/editor/index.html";
      }

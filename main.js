@@ -15,6 +15,5 @@ function check (){
           });
     }
     }
-localStorage.clear();
 
 

@@ -45,7 +45,7 @@ function signup (){
     Swal.fire({
         icon: "success",
         title: "Succsfull",
-        text: "You have signed up now login an enjoy",
+        text: "You have signed up now login and enjoy",
         footer: '<a href="./login index.html">Login?</a>'
     });
     document.getElementById("inp3").value = "";
